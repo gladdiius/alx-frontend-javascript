@@ -10,7 +10,8 @@ class Building {
 
   // Abstract method: evacuationWarningMessage
   evacuationWarningMessage() {
-    throw new Error('Class extending Building must override evacuationWarningMessage');
+    this.message = 'Class extending Building must override evacuationWarningMessage';
+    throw new Error(this.message);
   }
 }
 
