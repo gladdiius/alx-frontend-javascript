@@ -1,4 +1,5 @@
-export default class Building {
+// Building class definition
+class Building {
   constructor(sqft) {
     this._sqft = sqft;
   }
@@ -8,9 +9,11 @@ export default class Building {
     return this._sqft;
   }
 
-  // Abstract method: evacuationWarningMessage
-  evacuationWarningMessage() {
-    this.message = 'Class extending Building must override evacuationWarningMessage';
-    throw new Error(this.message);
-  }
+  // Abstract method that must be implemented by subclasses
 }
+
+Building.prototype.evacuationWarningMessage = () => {
+  throw new Error('Method evacuationWarningMessage must be implemented');
+};
+// Export the Building class
+export default Building;
