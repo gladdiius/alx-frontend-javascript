@@ -1,4 +1,4 @@
-class Building {
+export default class Building {
   constructor(sqft) {
     this._sqft = sqft;
   }
@@ -14,5 +14,3 @@ class Building {
     throw new Error(this.message);
   }
 }
-
-export default Building;
