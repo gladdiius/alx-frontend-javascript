@@ -13,7 +13,7 @@ class Building {
 }
 
 Building.prototype.evacuationWarningMessage = () => {
-  throw new Error('Method evacuationWarningMessage must be implemented');
+  throw new Error('Class extending Building must override evacuationWarningMessage');
 };
 // Export the Building class
 export default Building;
