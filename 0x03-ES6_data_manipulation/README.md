@@ -1,1 +1,1 @@
-this folder contains all the solutions for 0x03-ES6_data_manipulation
+this folder contains all the solutions for 0x03-ES6_data_manipulation 
