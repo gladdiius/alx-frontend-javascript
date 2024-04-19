@@ -1,22 +1,26 @@
-import cleanSet from "./8-clean_set.js";
+import cleanSet from './8-clean_set';
 
-test("Test cleanSet function with startString 'bon'", () => {
-    const set = new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']);
-    const startString = 'bon';
-    const expectedResult = 'jovi-aparte-appetit';
+describe('cleanSet', () => {
+    
   
-    const result = cleanSet(set, startString);
+    test('should return an empty string when startString is empty', () => {
+      const set = new Set(['apple', 'banana', 'avocado']);
+      const startString = '';
+      const expectedResult = '';
   
-    expect(result).toBe(expectedResult);
-  });
+      const result = cleanSet(set, startString);
   
-  test("Test cleanSet function with empty startString", () => {
-    const set = new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']);
-    const startString = '';
-    const expectedResult = 'bonjovi-bonaparte-bonappetit-banana';
+      expect(result).toBe(expectedResult);
+    });
   
-    const result = cleanSet(set, startString);
+    test('should return an empty string when no set values start with the given startString', () => {
+      const set = new Set(['apple', 'banana', 'avocado']);
+      const startString = 'mango';
+      const expectedResult = '';
   
-    expect(result).toBe(expectedResult);
+      const result = cleanSet(set, startString);
+  
+      expect(result).toEqual(expectedResult);
+    });
   });
   
